@@ -5,10 +5,10 @@ copyright Kwangho Heo
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.utils.np_utils import to_categorical
-from sklearn.cross_validation import train_test_split
 from keras.layers import Dense, Input, Flatten, merge
 from keras.layers import Conv1D, MaxPooling1D, Embedding, Dropout
 from keras.models import Model
+from keras.callbacks import EarlyStopping
 
 import numpy as np
 
@@ -71,19 +71,19 @@ class SLU_SA_CNN:
         embedded_sequences = embedding_layer(sequence_input)
 
         conv_0 = Conv1D(nb_filter, filter_sizes[0], activation='relu')(embedded_sequences)
-        maxpool_0 = MaxPooling1D(filter_sizes[0])(conv_0)
-        conv_0 = Conv1D(nb_filter, filter_sizes[0], activation='relu')(maxpool_0)
-        maxpool_0 = MaxPooling1D(35)(conv_0)  # global max pooling
+        maxpool_0 = MaxPooling1D(MAX_SEQUENCE_LENGTH - filter_sizes[0] + 1)(conv_0)
+        # conv_0 = Conv1D(nb_filter, filter_sizes[0], activation='relu')(maxpool_0)
+        # maxpool_0 = MaxPooling1D(35)(conv_0)  # global max pooling
 
         conv_1 = Conv1D(nb_filter, filter_sizes[1], activation='relu')(embedded_sequences)
-        maxpool_1 = MaxPooling1D(filter_sizes[1])(conv_1)
-        conv_1 = Conv1D(nb_filter, filter_sizes[1], activation='relu')(maxpool_1)
-        maxpool_1 = MaxPooling1D(35)(conv_1)  # global max pooling
+        maxpool_1 = MaxPooling1D(MAX_SEQUENCE_LENGTH - filter_sizes[1] + 1)(conv_1)
+        # conv_1 = Conv1D(nb_filter, filter_sizes[1], activation='relu')(maxpool_1)
+        # maxpool_1 = MaxPooling1D(35)(conv_1)  # global max pooling
 
         conv_2 = Conv1D(nb_filter, filter_sizes[2], activation='relu')(embedded_sequences)
-        maxpool_2 = MaxPooling1D(filter_sizes[2])(conv_2)
-        conv_2 = Conv1D(nb_filter, filter_sizes[2], activation='relu')(maxpool_2)
-        maxpool_2 = MaxPooling1D(35)(conv_2)  # global max pooling
+        maxpool_2 = MaxPooling1D(MAX_SEQUENCE_LENGTH - filter_sizes[2] + 1)(conv_2)
+        # conv_2 = Conv1D(nb_filter, filter_sizes[2], activation='relu')(maxpool_2)
+        # maxpool_2 = MaxPooling1D(35)(conv_2)  # global max pooling
 
         merged_tensor = merge([maxpool_0, maxpool_1, maxpool_2], mode='concat', concat_axis=1)
         flatten = Flatten()(merged_tensor)
@@ -95,7 +95,9 @@ class SLU_SA_CNN:
                       optimizer='rmsprop',
                       metrics=['acc'])
 
+        earlyStopping = EarlyStopping(monitor='val_loss', patience=0, verbose=0, mode='auto')
         # happy learning!
         model.fit(x_train, y_train, validation_data=(x_val, y_val),
-                  nb_epoch=100, batch_size=50)
+                  nb_epoch=100, batch_size=50,
+                  callbacks=[earlyStopping])
         pass

@@ -79,7 +79,7 @@ def main():
     for i in range(len(sessions)):
         dialog = sessions[i]
         for utter in dialog.utters:
-            utter.generate_ngram(ngram=3)
+            utter.generate_ngram(ngram=1)
     print 'Done'
 
     # print 'Dump ngrams...'

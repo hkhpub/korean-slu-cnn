@@ -1,0 +1,105 @@
+ True       Predicted    Utterance
+     confirm         request     음, 1시간 전에 울리도록 알람 좀 바꿔줘.
+     request        response     안방으로 잠깐 와볼래?
+     ask_ref          ask_if     이번 주까지 끝내야 할 학교 과제가 있는지 알아봐줄래?
+     request        greeting     스케줄 때문에 물어볼 게 있구나.
+     request          inform     다음주 토요일 일정을 말할게.
+     request        response     일정이 비어있는 토요일을 좀 알아봐줄래?
+    response         request     그러면 2일뒤로 가족모임을 연기해줘.
+     ask_ref          ask_if     오전에 해야 할 일 중에 안 한 게 있니?
+     request         ask_ref     아름아 지금 내 일정 좀 확인해줄래?
+    greeting         ask_ref     네, 말씀하세요.
+     request         ask_ref     엄마의 그날 일정을 확인해줄래?
+    response         ask_ref     어제의 일정이 어떻게 되는지 좀 봐줄래?
+    response         ask_ref     스케줄이 빈 날을 찾아줘.
+     request         ask_ref     이번 주 과제를 알아봐줘.
+     request          inform     음 그거 있잖아, 약속이 변경됐거든.
+     request         ask_ref     오늘 일정을 좀 확인해볼래?
+  expressive        response     아름아 수고했어.
+      inform        response     죄송합니다. 그 날은 일정이 있습니다.
+    response         ask_ref     할머니댁이 무슨 동인지 다시 1번 확인해볼래?
+     request        response     네, 부르셨어요.
+     ask_ref         request     산소 가는 날 스케줄 좀 확인해 줄래?
+    response         ask_ref     이번 주 일정을 좀 가르쳐줘.
+  expressive        greeting     아름아 안녕.
+      ask_if        response     그러면 자외선 차단제를 바르는 게 좋아, 아님 안바르는 게 좋아?
+     request          inform     어 내일 선배언니 생일인데 생일선물 사야 되거든.
+      ask_if        response     아름아 지금 바쁘니?
+     ask_ref         request     그러면 오늘 일정 좀 봐줘.
+    response         ask_ref     내일 오후 약속장소 좀 가르쳐줄래?
+     ask_ref         request     어 아름아 오늘 일정 좀 확인해줘라.
+     request         ask_ref     오늘 일정 확인해주겠니?
+      inform         request     그럼 3째주 금요일에 행사를 해야겠다.
+     ask_ref          inform     딴 건 없고?
+     request        response     어 이번 주 일정 좀 알려줘.
+    response         ask_ref     오전 약속 장소 좀 알려줘.
+     ask_ref        response     이번 달 말인데?
+      ask_if        response     이번 주 토요일에 비어있는 시간이 있어?
+     ask_ref          inform     그날 엄마의 퇴근시간을 알아?
+    response          accept     네, 일정을 변경했습니다.
+     ask_ref         request     음 지영이와 우철이가 만나서 같이 들어오도록 전해줘.
+     request         ask_ref     어 누나가 내일 몇 시에 끝나는지 물어봐줄래?
+      inform          ask_if     우철이는 시내 극장에 있어.
+     ask_ref        response     외할아버지 일정을 알아봐줄래?
+     ask_ref        response     말씀하세요.
+     request         ask_ref     오늘 일정 좀 검색해줄래?
+      ask_if         ask_ref     이번 주말에는?
+      accept        response     네, 알겠습니다.
+     request        response     이번 주말 스케줄을 확인해봐.
+    greeting      expressive     네, 잘 잤습니다.
+     request         ask_ref     엄마 일정에서 사장님 딸의 결혼식이 있는지 좀 알아봐줄래?
+      accept        response     알겠습니다.
+     request         ask_ref     그럼 그 요일에 할아버지 댁에 내려간다고 일정을 입력해줘.
+      ask_if          inform     아름아 오늘 해야 할 일이 있었어?
+    response         ask_ref     오전 약속 장소를 알려줄래?
+      inform         ask_ref     오늘 일정 좀 알려줘.
+      inform         ask_ref     그래, 경포대 좋겠다. 거기로 가야되겠네.
+      accept        response     설정합니다.
+     ask_ref          ask_if     아름아 이번 주 일요일에 다른 일정 없어?
+  expressive        greeting     아름아 잘 했어.
+    response         request     알람 시간을 변경하자.
+      accept        response     알겠습니다.
+    response         ask_ref     오후의 약속장소가 어딘지 좀 가르쳐줘.
+    response          accept     네, 일정을 변경합니다.
+      inform         request     휴가가는 주를 1주 여 연기해야겠다.
+     ask_ref        response     다음주 일정을 알려줘.
+     ask_ref          ask_if     시간이 겹쳐지는 것은 없니?
+     request        response     네, 설정합니다. 몇 시로 맞춰놓을까요?
+    response         ask_ref     할머니 생일이 언젠지 알려줘.
+     request          ask_if     추석 연휴에 일정이 입력되어 있는지 확인해줄래?
+     request          inform     약속이 변경되었다고 말해줘.
+    response          accept     네, 변경합니다.
+     ask_ref         request     우철이의 일정도 확인해줘.
+  expressive          accept     네, 알겠습니다.
+    response          ask_if     알람이 맞게 설정되었는지 다시 확인해줘.
+     request        response     이번 주 토요일에 일정이 있는지 좀 알아봐줘.
+     request        response     아름아 서재로 아빠를 불러다줄래?
+      accept        response     알겠습니다.
+     request        response     이번 주 수요일에 꽃꽂이 강좌를 듣는다고 등록해줘.
+     request         ask_ref     이번 달 말일에 스케줄이 없는 날을 검 찾아줘.
+     request         ask_ref     가족의 일정을 검색해줄래?
+     ask_ref         request     다음달 아빠 생일에 저녁식사 일정을 해줘.
+      accept        response     알겠습니다.
+    greeting        response     하 아름아 오늘 1일 어땠어? 잘 보냈어?
+     request        response     부르셨어요.
+     request         ask_ref     아름아 피서 일정을 좀 확인해봐.
+     request        greeting     아빠가 아름이 부른다.
+     ask_ref        response     오전에 무슨 일을 하셨어요.
+     request          inform     어 결혼 시간은 토요일 오후 2시.
+     request        response     저녁에 잡혀있던 가족모임을 변경해줄래?
+      inform        response     CGV 영화관.
+    response          accept     일정을 변경했습니다.
+     ask_ref        response     어 다음주 일정을 알려줘.
+     request         ask_ref     시간은 오후 1시야.
+     request        response     네, 부르셨어요?
+    response        greeting     네, 부르셨어요.
+     request          inform     그럼 골프 약속 내일로 변경하면 되겠다.
+     request         ask_ref     어디로 가면 좋을지 추천해줄래?
+    response         ask_ref     내일 무슨 일정이 있니?
+    response         ask_ref     오늘 점심시간 이후 엄마 일정이 뭐지?
+    response         ask_ref     네, 오전과 오후 약속이 있습니다. 어느 것을 알려드릴까요?
+     request         ask_ref     오후 일정 좀 확인해볼래?
+    response          accept     변경합니다.
+     ask_ref        response     약속날짜가 바꼈어?
+      accept        response     네, 변경된 일정을 입력했습니다.
+    greeting         ask_ref     어 아름아 뭐하고 놀았어?
